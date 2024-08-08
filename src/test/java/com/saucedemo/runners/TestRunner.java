@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
         glue = {"com.saucedemo.steps"}
 
       , tags =
-//        "@login and @Regression and " +
+        "@login or @Regression or " +
         "@Smoke"
         ,
         plugin = {"pretty"}
