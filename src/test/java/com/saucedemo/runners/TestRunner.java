@@ -12,7 +12,8 @@ import org.testng.annotations.DataProvider;
         "@login or @Regression or " +
         "@Smoke"
         ,
-        plugin = {"pretty"}
+        plugin = {"pretty","html:target/report/cucumber.html",
+                "json:target/report/cucumber.json","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 

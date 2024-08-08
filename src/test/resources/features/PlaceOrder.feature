@@ -1,3 +1,4 @@
+@PlaceOrder
 Feature: Sauce Demo E-commerce Place Order Functionality
 
   @Regression
