@@ -6,14 +6,18 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"com.saucedemo.steps"},
-        plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
-        }
+        glue = {"com.saucedemo.steps"}
+
+      , tags =
+//        "@login and @Regression and " +
+        "@Smoke"
+        ,
+        plugin = {"pretty"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }

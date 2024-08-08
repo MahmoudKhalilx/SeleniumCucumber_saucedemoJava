@@ -1,6 +1,6 @@
 Feature: Sauce Demo E-commerce Functionality
 
-
+@login @Regression
   Scenario Outline: Login with invalid credentials
     Given I am on the SauceDemo login page
     When I enter "<username_scenario>" username "<username>" and "<password_scenario>" password "<password>"
@@ -18,7 +18,8 @@ Feature: Sauce Demo E-commerce Functionality
 
 
 
-
+  @login @Regression
+@Smoke
   Scenario Outline: Login with valid credentials
     Given I am on the SauceDemo login page
     When I enter valid username "<username>" and valid password "<password>"
@@ -34,7 +35,8 @@ Feature: Sauce Demo E-commerce Functionality
 
 #  ====================================================
 
-
+  @Regression
+  @Smoke @checkout
   Scenario: Successful login and checkout process
     Given I am on the SauceDemo login page
     When I enter valid username "standard_user" and valid password "secret_sauce"
